@@ -40,6 +40,9 @@
 	]
 
 	let currentPlanet = writable(planetItems[0])
+
+	let buttonStyleIdle: string ="text-white pb-2 font-barlow text-navText uppercase hover:border-b-2 hover:border-white/50 "
+
 </script>
 
 <main class="mx-36 mt-20 ">
@@ -55,17 +58,17 @@
 			<div class="flex flex-row gap-10">
 				{#each planetItems as planet}
 					<div class="">
-						<button on:click={()=> currentPlanet.set(planet)}>
-							<p class="text-white font-barlow text-navText uppercase">{planet.name}</p>
+						<button
+							on:click={()=> currentPlanet.set(planet)}
+							class={planet.index === $currentPlanet.index ? buttonStyleIdle + "border-b-2" : buttonStyleIdle}
+						>
+							{planet.name}
 						</button>
-						{#if (planet.index === $currentPlanet.index)}
-							<span class="h-1 bg-white text-transparent w-full">hello</span>
-						{/if}
 					</div>
 				{/each}
 			</div>
 			<h1 class="text-h2 text-white font-bellefair uppercase">{$currentPlanet.name}</h1>
-			<p class="text-tahiti text-body font-barlow">{$currentPlanet.description}</p>
+			<p class="text-tahiti text-body font-barlowRegular">{$currentPlanet.description}</p>
 			<span class="h-1 bg-white text-transparent w-full">hello</span>
 			<div class="flex flex-row">
 				<div class="mr-10">

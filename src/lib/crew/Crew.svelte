@@ -47,7 +47,7 @@
 		<div>
 			<p class="text-white opacity-25 font-bellefair text-h4 uppercase">{$currentCrew.role}</p>
 			<h2 class="font-bellefair text-h3 text-white uppercase">{$currentCrew.name}</h2>
-			<p class="text-tahiti font-barlow w-4/6">{$currentCrew.description}</p>
+			<p class="text-tahiti font-barlowRegular w-4/6">{$currentCrew.description}</p>
 		</div>
 		<div>
 			{#each crewItems as crew}
