@@ -17,4 +17,8 @@
         font-family: 'Bellefair';
         src: url('../public/assets/fonts/Bellefair-Regular.ttf') format('opentype');
     }
+		@font-face {
+				font-family: 'BarlowRegular';
+				src: url('../public/assets/fonts/Barlow-Regular.ttf') format('opentype');
+    }
 </style>

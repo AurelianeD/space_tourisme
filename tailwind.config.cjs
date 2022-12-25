@@ -12,6 +12,7 @@ module.exports = {
       fontFamily: {
         barlow: ['BarlowCondensed', 'sans-serif'],
         barlowBold: ['BarlowCondensedBold', 'sans-serif'],
+        barlowRegular: ['Barlow', 'sans-serif'],
         bellefair:['Bellefair', 'sans-serif']
       },
     },
