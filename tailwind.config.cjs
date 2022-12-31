@@ -22,6 +22,7 @@ module.exports = {
       'white': '#FFFFFF',
       'transparent': 'transparent',
       'whiteOpacity': 'rgba(255, 255, 255, 0.05)',
+      'gray': '#383B4B'
     },
     fontSize: {
       'h1': '150px',

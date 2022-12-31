@@ -41,7 +41,7 @@
 
 	let currentPlanet = writable(planetItems[0])
 
-	let buttonStyleIdle: string ="text-white pb-2 font-barlow text-navText uppercase hover:border-b-2 hover:border-white/50 "
+	let buttonStyleIdle: string ="text-white pb-2 font-barlow text-navText uppercase  "
 
 </script>
 
@@ -60,7 +60,7 @@
 					<div class="">
 						<button
 							on:click={()=> currentPlanet.set(planet)}
-							class={planet.index === $currentPlanet.index ? buttonStyleIdle + "border-b-2" : buttonStyleIdle}
+							class={planet.index === $currentPlanet.index ? buttonStyleIdle + "border-b-2" : buttonStyleIdle + 'hover:border-b-2 hover:border-white/50'}
 						>
 							{planet.name}
 						</button>
@@ -68,9 +68,10 @@
 				{/each}
 			</div>
 			<h1 class="text-h2 text-white font-bellefair uppercase">{$currentPlanet.name}</h1>
-			<p class="text-tahiti text-body font-barlowRegular">{$currentPlanet.description}</p>
-			<span class="h-1 bg-white text-transparent w-full">hello</span>
-			<div class="flex flex-row">
+			<div class="border-b border-gray pb-10">
+				<p class="text-tahiti text-body font-barlowRegular ">{$currentPlanet.description}</p>
+			</div>
+			<div class="flex flex-row pt-10">
 				<div class="mr-10">
 					<p class="text-tahiti font-barlow text-subheading2 uppercase">avg. distance</p>
 					<p class="text-white font-bellefair text-subheading1 uppercase">{$currentPlanet.distance}</p>

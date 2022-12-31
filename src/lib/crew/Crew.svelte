@@ -36,10 +36,11 @@
 	]
 
 	let currentCrew = writable(crewItems[0]);
+	let navigationStyle: string = 'w-5 h-5 rounded-full mr-10 text-transparent '
 </script>
 
 <main class="mx-36 my-20 flex-row flex">
-	<div class="gap-y-32 grid h-80 w-4/6">
+	<div class="flex flex-col justify-between h-[35rem] w-4/6">
 		<h1 class="font-barlow text-h5">
 			<span class="text-white opacity-25 font-bold">0{$navBarIndex}</span>
 			<span class="text-white uppercase">{navBar[$navBarIndex].title}</span>
@@ -52,10 +53,10 @@
 		<div>
 			{#each crewItems as crew}
 				<button
-						class="w-5 h-5 rounded-full bg-white text-transparent mr-10"
+						class={crew.index === $currentCrew.index ? navigationStyle + 'bg-white' : navigationStyle + 'bg-white/25 hover:bg-white/50'}
 						on:click={() => currentCrew.set(crew)}
 				>
-					helo
+					hello
 				</button>
 			{/each}
 		</div>

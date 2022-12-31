@@ -27,6 +27,7 @@
 	]
 
 	let currentTechnoItem = writable(technoItems[0]);
+	let navigationStyle: string = 'py-3 px-7 font-bellefair text-h4 rounded-full border-2 '
 </script>
 
 <main class=" mt-20 flex flex-row">
@@ -40,7 +41,7 @@
 				{#each technoItems as techno}
 					<button
 						on:click={() => currentTechnoItem.set(techno)}
-						class="bg-black py-3 px-7 text-white font-bellefair text-h4 rounded-full border-white border-2"
+						class={techno.index === $currentTechnoItem.index ? navigationStyle + 'bg-white text-black' : navigationStyle + 'bg-black border-white/50 text-white hover:border-white'}
 					>
 						{techno.index + 1}
 					</button>

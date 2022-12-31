@@ -5,8 +5,7 @@
 
 	let src = '../../public/assets/shared/logo.svg'
 
-	let navbarStyle: string = 'mr-10 flex flex-col pb-5 hover:border-b-2 hover:border-white/50'
-//TODO : fix style navBar when hover
+	let navbarStyle: string = 'mr-10 flex flex-col pb-5 '
 
 </script>
 
@@ -19,7 +18,7 @@
 		{#each navBar as nav}
 			<a href="#"
 				 on:click="{() => {$navBarIndex= nav.index}}"
-				 class={nav.index === $navBarIndex ? navbarStyle + 'border-b-2 border-white' : navbarStyle}
+				 class={nav.index === $navBarIndex ? navbarStyle + 'border-b-2 border-white' : navbarStyle + 'hover:border-b-2 hover:border-white/50'}
 			>
 				<div>
 					<span class="text-white text-navText font-barlowBold text-2xl mr-3">{`0${nav.index}`}</span>
@@ -31,7 +30,5 @@
 </div>
 
 <style>
-	.blur{
-			backdrop-filter: blur(20px);
-	}
+
 </style>
