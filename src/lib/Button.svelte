@@ -1,6 +1,20 @@
 <main class="">
-	<button class="bg-white rounded-full largeButton mt-40 px-16 py-18 mr-28">
-		<p class="font-bellefair text-h4 text-black uppercase">Explore</p>
+	<button class="
+		mt-32
+		font-bellefair
+		text-h4
+		text-black
+		uppercase
+		bg-white
+		rounded-full
+		largeButton
+		py-10
+		px-8
+		self-center
+		md:mt-10
+		lg:mt-40 lg:px-16 lg:py-18 lg:mr-28"
+	>
+		Explore
 	</button>
 </main>
 

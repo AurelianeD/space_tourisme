@@ -39,29 +39,29 @@
 	let navigationStyle: string = 'w-5 h-5 rounded-full mr-10 text-transparent '
 </script>
 
-<main class="mx-36 my-20 flex-row flex">
-	<div class="flex flex-col justify-between h-[35rem] w-4/6">
-		<h1 class="font-barlow text-h5">
+<main class="mx-7 lg:mx-36 lg:my-20 lg:flex-row ">
+	<div class="flex flex-col lg:justify-between lg:h-[35rem] lg:w-4/6">
+		<h1 class="font-barlow text-h5 text-center order-1 my-10 md:text-left md:text-h5-tablet lg:my-0">
 			<span class="text-white opacity-25 font-bold">0{$navBarIndex}</span>
 			<span class="text-white uppercase">{navBar[$navBarIndex].title}</span>
 		</h1>
-		<div>
-			<p class="text-white opacity-25 font-bellefair text-h4 uppercase">{$currentCrew.role}</p>
-			<h2 class="font-bellefair text-h3 text-white uppercase">{$currentCrew.name}</h2>
-			<p class="text-tahiti font-barlowRegular w-4/6">{$currentCrew.description}</p>
+		<div class="flex order-2 justify-center border-b border-gray md:border-none md:order-4 md:absolute md:bottom-0 md:right-2/4 lg:absolute lg:bottom-0 lg:right-20">
+			<img src="{$currentCrew.image}" alt="{$currentCrew.name}" class="w-2/4 md:w-2/4 lg:w-full"/>
 		</div>
-		<div>
+		<div class="order-4 md:order-2 md:px-32">
+			<p class="text-white opacity-25 font-bellefair text-navText uppercase text-center md:text-h3Phone lg:text-h4 lg:text-left">{$currentCrew.role}</p>
+			<h2 class="font-bellefair text-h3Phone text-center text-white uppercase md:text-h3-tablet lg:text-left lg:text-h3">{$currentCrew.name}</h2>
+			<p class="text-tahiti font-barlowRegular font-bodyPhone text-center mt-5 md:text-body-tablet lg:text-left">{$currentCrew.description}</p>
+		</div>
+		<div class="flex order-3 justify-center my-10">
 			{#each crewItems as crew}
 				<button
 						class={crew.index === $currentCrew.index ? navigationStyle + 'bg-white' : navigationStyle + 'bg-white/25 hover:bg-white/50'}
 						on:click={() => currentCrew.set(crew)}
 				>
-					hello
 				</button>
 			{/each}
 		</div>
 	</div>
-	<div class="absolute bottom-0 right-20">
-		<img src="{$currentCrew.image}" alt="{$currentCrew.name}" />
-	</div>
+
 </main>

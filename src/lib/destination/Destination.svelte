@@ -45,17 +45,17 @@
 
 </script>
 
-<main class="mx-36 mt-20 ">
-	<h1 class="font-barlow text-h5">
+<main class="md:mx-10 lg:mx-36 lg:mt-20">
+	<h1 class="font-barlow text-h5 text-center mt-20 md:text-left md:">
 		<span class="text-white opacity-25 font-bold">0{$navBarIndex}</span>
 		<span class="text-white uppercase">{navBar[$navBarIndex].title}</span>
 	</h1>
-	<div class="grid grid-cols-2 gap-16	 mt-20 ml-16">
-		<div class="self-center w-4/5">
-			<img src={$currentPlanet.image} alt="image planete" class="w-full"/>
+	<div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:mt-20 lg:ml-16">
+		<div class="flex justify-center my-10">
+			<img src={$currentPlanet.image} alt="image planete" class="w-2/4 md:w-1/3 lg:w-4/5 "/>
 		</div>
-		<div class="">
-			<div class="flex flex-row gap-10">
+		<div>
+			<div class="flex flex-row gap-10 justify-center lg:justify-start">
 				{#each planetItems as planet}
 					<div class="">
 						<button
@@ -67,18 +67,18 @@
 					</div>
 				{/each}
 			</div>
-			<h1 class="text-h2 text-white font-bellefair uppercase">{$currentPlanet.name}</h1>
-			<div class="border-b border-gray pb-10">
-				<p class="text-tahiti text-body font-barlowRegular ">{$currentPlanet.description}</p>
+			<h1 class="text-h3 text-white font-bellefair uppercase text-center lg:text-h2 lg:text-left">{$currentPlanet.name}</h1>
+			<div class="border-b border-gray pb-10 mx-10 md:mx-32 lg:mx-0">
+				<p class="text-tahiti text-bodyPhone font-barlowRegular text-center lg:text-body lg:text-left">{$currentPlanet.description}</p>
 			</div>
-			<div class="flex flex-row pt-10">
-				<div class="mr-10">
-					<p class="text-tahiti font-barlow text-subheading2 uppercase">avg. distance</p>
-					<p class="text-white font-bellefair text-subheading1 uppercase">{$currentPlanet.distance}</p>
+			<div class="flex flex-col lg:flex-row pt-10">
+				<div class="lg:mr-10">
+					<p class="text-tahiti font-barlow text-subheading2 uppercase text-center lg:text-left">avg. distance</p>
+					<p class="text-white font-bellefair text-subheading1 uppercase text-center lg:text-left">{$currentPlanet.distance}</p>
 				</div>
-				<div class="ml-10">
-					<p class="text-tahiti font-barlow text-subheading2 uppercase">est. travel time</p>
-					<p class="text-white font-bellefair text-subheading1 uppercase">{$currentPlanet.travelTime}</p>
+				<div class="my-10 lg:ml-10 lg:my-0">
+					<p class="text-tahiti font-barlow text-subheading2 uppercase text-center lg:text-left">est. travel time</p>
+					<p class="text-white font-bellefair text-subheading1 uppercase text-center lg:text-left">{$currentPlanet.travelTime}</p>
 				</div>
 			</div>
 		</div>
