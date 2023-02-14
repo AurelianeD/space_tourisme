@@ -1,7 +1,4 @@
 <script lang="ts">
-	export let navBar;
-	export let navBarIndex;
-
 	import Button from "../Button.svelte";
 </script>
 

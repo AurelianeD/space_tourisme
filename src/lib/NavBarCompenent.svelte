@@ -2,11 +2,11 @@
 
 	import {writable} from "svelte/store";
 
-  export let navBar;
+	export let navBar;
 	export let navBarIndex;
 	export let background;
 
-	let src: string = '../../public/assets/shared/logo.svg'
+	let src: string = 'assets/shared/logo.svg'
 
 	let navbarStyle: string = 'mr-10 flex flex-col pb-5 '
 
@@ -14,7 +14,7 @@
 
 </script>
 
-<main class="flex flex-row justify-between pt-10 px-5 md:pt-5 md:pl-10 items-center">
+<main class="flex flex-row justify-between pt-5 px-5 md:pt-5 md:pl-10 items-center">
 	<div>
 		<img {src} alt="logo"/>
 	</div>
@@ -36,13 +36,13 @@
 		{/each}
 	</div>
 	<div class=" sm:block md:hidden" on:click={() =>{showMenu.set(true)}}>
-		<img src="../../public/assets/icons/hamburger.svg" alt="hamburger icon"/>
+		<img src="assets/icons/hamburger.svg" alt="hamburger icon"/>
 	</div>
 
 	{#if $showMenu}
 		<div class="backdrop-blur-lg h-screenHeight w-2/3 absolute right-0.5 top-0 z-10">
 			<img
-				src="../../public/assets/icons/cross.png"
+				src="assets/icons/cross.png"
 				alt=	"croix icon"
 				on:click={() => {showMenu.set(false)}}
 				class="relative top-14 left-56"

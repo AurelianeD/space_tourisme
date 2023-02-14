@@ -11,31 +11,31 @@
     {
       index: 0,
       name: 'Home',
-      bg: '../public/assets/home/background-home-desktop.jpg',
+      bg: 'assets/home/background-home-desktop.jpg',
     },
     {
       index: 1,
       name: 'Destination',
-      bg: '../public/assets/destination/background-destination-desktop.jpg',
+      bg: 'assets/destination/background-destination-desktop.jpg',
       title: 'Pick your destination'
     },
     {
       index: 2,
       name: 'Crew',
-      bg: '../public/assets/crew/background-crew-desktop.jpg',
+      bg: 'assets/crew/background-crew-desktop.jpg',
       title: 'Meet your crew'
     },
     {
       index: 3,
       name: 'Technology',
-      bg: '../public/assets/technology/background-technology-desktop.jpg',
+      bg: 'assets/technology/background-technology-desktop.jpg',
       title: 'Space launch 101'
     }
   ]
 
   const navBarIndex = writable(0);
 
-  const background = writable('../public/assets/home/background-home-desktop.jpg');
+  const background = writable('assets/home/background-home-desktop.jpg');
   // let backgroundUrl = $background;
 
 </script>
